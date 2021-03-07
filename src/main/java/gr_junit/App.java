@@ -8,8 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-
-        System.out.println( new Calculator().add(2,4) );
+        System.out.println("Hello world!");
     }
 }
 

@@ -13,18 +13,18 @@ public class AbbreviationsResolver {
     }
     public String createAbbreviations(String name){
         if(name.matches("^[a-zA-Z].*\\p{Punct}+[a-zA-Z].*$")){
-         throw new RuntimeException("name tust contaen 2 words");
+         throw new RuntimeException("Name 1");
         }
         String[] words=name.split(" ");
         if(words.length<2){
-            throw new RuntimeException("name tust contaen 1 words");
+            throw new RuntimeException("Name 2");
         }
         StringBuilder abbreviation=new StringBuilder();
         for(int i=0;i<words.length;i++){
             abbreviation.append(words[i].toUpperCase().charAt(0));
         }
        abbreviations.put(name,abbreviation.toString());
-        return abbreviation.toString().substring(1);
+        return abbreviation.toString();
     }
     public boolean abbreviationExits(String abbreviation){
         if(!abbreviation.toUpperCase().equals(abbreviation)){

@@ -1,6 +1,6 @@
 package gr_junit;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 
 public class AbbreviationsResolveTest {
@@ -12,7 +12,14 @@ public class AbbreviationsResolveTest {
         String inputData = "Korean National Republic";
         String  rememberResult= "KNR";
         String newResult = abbreviationsResolver.createAbbreviations(inputData);
-        Assertions.assertEquals(rememberResult, newResult);
+        assertEquals(rememberResult, newResult);
     }
+//    @Test
+//    public void createAbbreviationTest_excetionFlow(){
+//        String inccorectName1="New, York";
+//        Exception exception=Assertions.assertThrows(RuntimeException.class ,
+//                ()->abbreviationsResolver,createAbbreviations(inccorectName1));
+//        Assertions.assertEquals("Name 1");
+//    }
 
 }
