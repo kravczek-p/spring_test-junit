@@ -24,7 +24,7 @@ public class AbbreviationsResolver {
             abbreviation.append(words[i].toUpperCase().charAt(0));
         }
        abbreviations.put(name,abbreviation.toString());
-        return abbreviation.toString();
+        return abbreviation.toString().substring(1);
     }
     public boolean abbreviationExits(String abbreviation){
         if(!abbreviation.toUpperCase().equals(abbreviation)){
