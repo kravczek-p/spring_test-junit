@@ -19,7 +19,7 @@ public class AbbreviationsResolveTest {
 
     @Test
     public void createAbbreviationTest_excetionFlow() {
-        String inccorectName1 = "Name, York";
+        String inccorectName1 = "Name,York";
         Exception exception = assertThrows(Exception.class, () -> abbreviationsResolver.
                 createAbbreviations(inccorectName1));
         assertEquals("Name 1", exception.getMessage());
